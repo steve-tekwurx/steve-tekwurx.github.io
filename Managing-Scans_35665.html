@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>uControl Documentation 5.0 : Managing Scans</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">uControl Documentation 5.0</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Documentation_35418.html">Documentation</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="User-Guide_35639.html">User Guide</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="uManage_35645.html">uManage</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            uControl Documentation 5.0 : Managing Scans
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Steve Hicks</span> on Jul 08, 2016
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>uManage allows you to import - on a regular basis a list of subnets from a remote ssh location. Once the import is completed uControl will understand what is new / existing or missing compared to the last import. It will then, on schedule, run these subnets through a 'Sweep Scan' in ADDM and retrieve the responsive IPS. These IP's are then configured to run against production ADDM scanners to completed a full discovery of the assets. uManage Scans ensures the ADDM production scanners only try to scan IPs that are valid and responsive in the discovery estate, minimising your production scan windows and ensuring through the uManage Scans Rules Engine that nothing is missed within the configured / supplied subnets.</p><h1 id="ManagingScans-ImportSubnetinformation">Import Subnet information</h1><p>The import of this information is configured through the uAdmin -&gt; uManage section of uControl. Further information of this can be found <a href="uManage-Subnet-Scanning_35188.html">here</a>.</p><h2 id="ManagingScans-ResultsPostImport">Results Post Import</h2><p>On completion of the file import the uManage -&gt; Discovery -&gt; Scans -&gt; Define page will be populated with the following information:</p><ul><li>Scannable networks not linked to a schedule</li><li>Scannable networks not in last import</li><li>Scannable networks NEW in last import</li><li>List of Scannable networks</li></ul><div class="confluence-information-macro confluence-information-macro-note"><span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>If emails are enabled and an email address was configured for email updates post import, the above information will be supplied within the email that is sent</p></div></div><p> </p><h1 id="ManagingScans-CreatingSchedules">Creating Schedules</h1><p>Schedules are created per appliance. Appliances that are available to be selected are based on the uAdmin -&gt; uManage -&gt; &quot;Manage Appliance Roles&quot; definitions.</p><p>To create a new schedule:</p><ol><li>Navigate to uManage -&gt; Discovery -&gt; Scans -&gt; Scanner and drop down the appliance that you would like to create a schedule for.</li><li>Select 'New Schedule'<br/><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" width="500" src="attachments/35665/32908.png" data-image-src="attachments/35665/32908.png" data-unresolved-comment-count="0" data-linked-resource-id="32908" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Screen Shot 2015-02-17 at 12.43.42.png" data-base-url="https://testconftekwurx.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="35665" data-linked-resource-container-version="1"></span></li><li>Input a Name, Description and configure the time / dates schedule to complete the run.</li><li>Optional - Add subnet IP ranges with the 'Add Network' section (This can be don from the Define tab from a multi select table)</li><li>Create Schedule</li></ol><div class="confluence-information-macro confluence-information-macro-note"><span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>Sweep Scan - this option is to control the type of scan. This has 2 options:</p><p>Linked - Allow the adding of subnet definitions to the scan</p><p>All Linked - For the appliance selected take all the Linked subnets and create a 'Master' scan. Good for weekly / monthly scans.</p></div></div><p> </p><h1 id="ManagingScans-EditSchedules">Edit Schedules</h1><p>To edit a schedule navigate to uManage -&gt; Discovery -&gt; Scans -&gt; Schedules.</p><p>Select the schedule you would like to edit. This will open up the schedule definition and allow editing.</p><p> </p><h1 id="ManagingScans-ViewStatusandMessages">View Status and Messages</h1><p>To view the status or any message from the uManage Scans navigate to uManage -&gt; Discovery -&gt; Scans -&gt; View Log</p><p> </p>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/35665/32908.png">Screen Shot 2015-02-17 at 12.43.42.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/35665/32888.png">Screen Shot 2014-09-10 at 11.46.44.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/35665/32891.png">Screen Shot 2014-09-10 at 11.30.28.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/35665/32894.png">Screen Shot 2014-09-10 at 11.28.54.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/35665/32897.png">Screen Shot 2014-09-10 at 11.56.04.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/35665/32873.png">Screen Shot 2014-09-10 at 11.54.11.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/35665/32877.png">Screen Shot 2014-09-10 at 11.52.49.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/35665/32881.png">Screen Shot 2014-09-10 at 11.50.28.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/35665/32885.png">Screen Shot 2014-09-10 at 11.49.29.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                 
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Oct 11, 2016 11:12</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>
