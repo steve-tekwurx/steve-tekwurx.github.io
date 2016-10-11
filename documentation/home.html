@@ -43,7 +43,7 @@
                 </li>
                 <ul>
                     <li>
-                <a class="click" loadFile="Release-Notes_35407.html">Release Notes</a>
+                <a class="click collapse" loadFile="Release-Notes_35407.html">Release Notes</a>
 
                             <ul>
                     <li>
@@ -515,7 +515,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 content">
-                        <h1>Simple Sidebar 3</h1>
+                        <h1>Simple Sidebar 4</h1>
                         <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
                         <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
                         <a class="click" loadFile="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
@@ -546,6 +546,7 @@
 	 
 	 
   	 $('.click').on("click", function(e){
+  	 $(".click").toggleClass("collapse");
         e.preventDefault(); // cancel the default a tag event.
 
 		
