@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>uControl Documentation 5.0 : Integrating with BMC ADDM</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">uControl Documentation 5.0</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Documentation_35418.html">Documentation</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Getting-Started_35164.html">Getting Started</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Using-uControl_35150.html">Using uControl</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            uControl Documentation 5.0 : Integrating with BMC ADDM
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Steve Hicks</span> on Jul 08, 2016
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>After having installed uControl one of the first tasks is to integrate uControl with your ADDM appliances.</p><div class="confluence-information-macro confluence-information-macro-information"><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>In oder to integrate with ADDM you will need the following information:</p><ul><li>URL of ADDM Applicance</li><li>IP Address of ADDM appliance</li><li>SSH user name</li><li>SSH user password</li><li>ADDM System user</li><li>ADDM System password</li></ul></div></div><p> </p><h2 id="IntegratingwithBMCADDM-AddingADDMappliancetouControl"><strong>Adding ADDM appliance to uControl</strong></h2><ol><li>Login to uControl as the administration user</li><li>Click the uAdmin icon<br/><br/><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/35181/34297.png" data-image-src="attachments/35181/34297.png" data-unresolved-comment-count="0" data-linked-resource-id="34297" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Screen Shot 2014-06-23 at 10.52.43.png" data-base-url="https://testconftekwurx.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="35181" data-linked-resource-container-version="1"></span><br/><br/></li><li>On the administration page select the uManage TAB<br/><br/><br/><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" width="500" src="attachments/35181/34303.png" data-image-src="attachments/35181/34303.png" data-unresolved-comment-count="0" data-linked-resource-id="34303" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Screen Shot 2014-06-23 at 11.19.15.png" data-base-url="https://testconftekwurx.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="35181" data-linked-resource-container-version="1"></span><br/><br/><br/></li><li>On the uManage TAB under Manage Appliances TAB click Create Appliance.<br/><br/><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image confluence-thumbnail" width="300" src="attachments/35181/34302.png" data-image-src="attachments/35181/34302.png" data-unresolved-comment-count="0" data-linked-resource-id="34302" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Screen Shot 2015-02-17 at 09.08.03.png" data-base-url="https://testconftekwurx.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="35181" data-linked-resource-container-version="1"></span><br/><br/></li><li>On the pop-up enter the information required to connect uControl to ADDM. The working DIR is the location on the remote ADDM appliance where you would like uControl to copy and upload files to. It is recommended that the working DIR is the /tmp DIR. Once completed, click OK. If you are using HTTPS UI access with ADDM then set SSL to yes.</li></ol><h2 id="IntegratingwithBMCADDM-AssigningrolestoADDMappliances"><strong>Assigning roles to ADDM appliances</strong></h2><p><strong><br/></strong>Once ADDM appliances have been added to uControl they can be assigned roles which controls how uControl interacts with the Appliance. For example if you have a DEV appliance which you use for testing TPL patterns before you deploy to a production appliance then you can assign a DEV TPL appliance and a PROD TPL appliance in uControl. This will result in all TPL being deployed to your DEV appliance and once tested deployed to your PROD appliances.</p><ol><li>Login to uControl as the Admin user and select the uAdmin module</li><li>On the uManage TAB screen click the Roles TAB.<br/><br/><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/35181/34301.png" data-image-src="attachments/35181/34301.png" data-unresolved-comment-count="0" data-linked-resource-id="34301" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Screen Shot 2015-02-17 at 09.09.25.png" data-base-url="https://testconftekwurx.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="35181" data-linked-resource-container-version="1"></span><br/><br/></li><li>Depending on the role that you wish uControl to use the specific ADDM appliance for - click the Add Appliance button and select the required ADDM appliance from the list.</li></ol><p> </p>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/35181/34301.png">Screen Shot 2015-02-17 at 09.09.25.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/35181/34302.png">Screen Shot 2015-02-17 at 09.08.03.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/35181/34303.png">Screen Shot 2014-06-23 at 11.19.15.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/35181/34297.png">Screen Shot 2014-06-23 at 10.52.43.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/35181/34298.png">Screen Shot 2014-03-08 at 11.56.58.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/35181/34299.png">Screen Shot 2014-03-08 at 11.55.07.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/35181/34300.png">Screen Shot 2014-03-08 at 11.53.29.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/35181/34295.png">Screen Shot 2014-06-23 at 11.20.23.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                 
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Oct 11, 2016 11:10</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

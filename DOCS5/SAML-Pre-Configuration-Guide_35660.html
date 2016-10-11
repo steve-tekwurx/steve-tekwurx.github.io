@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>uControl Documentation 5.0 : SAML Pre-Configuration Guide</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">uControl Documentation 5.0</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Documentation_35418.html">Documentation</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            uControl Documentation 5.0 : SAML Pre-Configuration Guide
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Oliver Wood</span>, last modified on Aug 17, 2016
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>To run and authenticate uControl against an Active Directory Federation Server using SAML protocol, you will be required configure tomcat before running SAML SSO setup.</p><p><strong>Making Tomcat run on HTTPS</strong></p><p>If tomcat is already configured to run using HTTPS then ignore the following instructions</p><p><strong>Step 1:</strong></p><p>Generate a certificate, <a href="https://tomcat.apache.org/tomcat-8.0-doc/ssl-howto.html#Configuration" class="external-link" rel="nofollow">https://tomcat.apache.org/tomcat-8.0-doc/ssl-howto.html#Configuration</a></p><p>Once the certificate is generated edit theserver xml file and replace the commented out block:</p><p>&lt;!--<br/>&lt;Connector port=&quot;8443&quot; protocol=&quot;org.apache.coyote.http11.Http11NioProtocol&quot;<br/>                    maxThreads=&quot;150&quot; SSLEnabled=&quot;true&quot;&gt;<br/>                   &lt;SSLHostConfig&gt;<br/>                            &lt;Certificate certificateKeystoreFile=&quot;conf/localhost-rsa.jks&quot; type=&quot;RSA&quot; /&gt;<br/>                   &lt;/SSLHostConfig&gt;<br/>&lt;/Connector&gt;<br/> --&gt;</p><p>with</p><p> &lt;Connector port=&quot;8443&quot; protocol=&quot;org.apache.coyote.http11.Http11NioProtocol&quot;<br/>                      maxThreads=&quot;150&quot; SSLEnabled=&quot;true&quot; scheme=&quot;https&quot; secure=&quot;true&quot;<br/>                      keystoreFile=&quot;&lt;directory&gt;/&lt;file&gt;&quot; keystorePass=&quot;&lt;password&gt;&quot;<br/>                      clientAuth=&quot;false&quot; sslProtocol=&quot;TLS&quot;&gt;<br/>&lt;/Connector&gt;</p><p>Where keystoreFile and keystorePass are secified replace with location to your jks file and the password used to create the jks file</p><p> </p><p>Step 2: Restart Tomcat, check logs <strong>&lt;Tomcat_Home&gt;</strong>/logs/catalina.out, if no errors then access pages on https://&lt;ipaddress/domain&gt;:&lt;https port&gt;/</p><p>If Tomcat default screen is displayed HTTPS is correctly set up</p><p> </p><p><strong>SAML SSO Pre-Configuration Steps</strong></p><p><strong>Step 1:</strong></p><p>Ensure you have downloaded and replaced <strong>local_policy.jar </strong>and <strong>US_E</strong><strong>xport_policy.jar</strong>, the correct version will need to be downloaded for the JDK installed:</p><p>JDK 1.8 <a href="http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html" class="external-link" rel="nofollow">http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html</a></p><p>JDK 1.7 <a href="http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html" class="external-link" rel="nofollow">http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html</a></p><p>Once downloaded replace files in your <strong>&lt;JAVA_HOME&gt;</strong>/jre/lib/security directory</p><p><strong>Step 2:</strong></p><p>We don't wish Tomcat to hot-redeploy if files are touched with-in uControl, to prevent this edit the context.xml file located in your TOMCAT_HOME/conf directory</p><p>Within the &lt;Context&gt; element, comment out the element &lt;WatchedResource&gt;/WEB-INF/web.xml&lt;/WatchedResource&gt;: see below</p><p>&lt;Context&gt;</p><p>       &lt;!-- &lt;WatchedResource&gt;/WEB-INF/web.xml&lt;/WatchedResource&gt; --&gt;</p><p>&lt;/Context&gt;</p><p><strong>Step 3:</strong></p><p>Make sure the attribute reloadable is not set to true on the &lt;Context&gt; element, if it is not their then it is false by default.</p><p><strong>Step 4:</strong></p><p>We are going to want to run Tomcat as uControl and not as root, make sure all files under <strong>&lt;Tomcat_home&gt;</strong> are owned by ucontrol</p><p>to do this run command as root 'sudo chown -R &lt;user&gt;:&lt;group&gt;' User and Group stand for what was set up as the account for uControl</p><p><strong>Step 5:</strong></p><p>uControl creates a log file in <strong>/apps/uControl/log </strong>make sure this is owned by uControl and not root as if Tomcat is stated as uControl it would noy be able to write to this file.</p><p><strong><br/></strong></p><p><strong>SAML SSO Post-Deployment Steps</strong></p><p><strong>Step 1:</strong></p><p>Once you have copied over uControl.war, started Tomcat and the war has unpacked and loaded cleanly. you will need to give further write and executable permissions to the files.</p><p>To do this run the following command from <strong>&lt;Tomcat_Home&gt;</strong>/webapps directory: <strong>chmod -R 775 uControl</strong></p><p><strong>Step2:</strong></p><p>To ensure that uControl.war is not unpacked everytime Tomcat restarts, you will need to rename the file, but first you will need to stop Tomcat, once stopped rename the file by traversing to the webapps directory and use the command:</p><p><strong>mv uControl.war uControl.war.bak</strong></p><p><strong>Step 3:</strong></p><p>Restart Tomcat, but before doing this check that not processes still exist: run command: <strong>ps -ef | grep tomcat </strong>, if this produces a process id then it kill it using command: <strong>kill -9 &lt;process id&gt;</strong></p><p>Now you can start Tomcat cleanly.</p><p> </p><p> </p>
+                    </div>
+
+                    
+                 
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Oct 11, 2016 11:12</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

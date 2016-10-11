@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>uControl Documentation 5.0 : Assign ADDM Appliances to uControl roles</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">uControl Documentation 5.0</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Documentation_35418.html">Documentation</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Getting-Started_35164.html">Getting Started</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Using-uControl_35150.html">Using uControl</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            uControl Documentation 5.0 : Assign ADDM Appliances to uControl roles
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Steve Hicks</span> on Jul 08, 2016
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p> </p><h1 id="AssignADDMAppliancestouControlroles-ConfigureRoles">Configure Roles</h1><p>Once ADDM appliances have been added to uControl they can be assigned roles which controls how uControl interacts with the Appliance. For example if you have a DEV appliance which you use for testing TPL patterns before you deploy to a production appliance then you can assign a DEV TPL appliance and a PROD TPL appliance in uControl. This will result in all TPL being deployed to your DEV appliance and once tested deployed to your PROD appliances.</p><ol><li>Login to uControl as an Admin privileged user and select the uAdmin module</li><li>Under the uManage TAB click on the 'Manage Appliance Roles' TAB.<br/><br/><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" width="500" src="attachments/35602/34354.png" data-image-src="attachments/35602/34354.png" data-unresolved-comment-count="0" data-linked-resource-id="34354" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Screen Shot 2014-06-23 at 11.50.22.png" data-base-url="https://testconftekwurx.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="35602" data-linked-resource-container-version="1"></span><br/><br/></li><li>Depending on the role that you wish uControl to use the specific ADDM appliance for - click the Add Appliance button and select the required ADDM appliance from the list.</li></ol><p> </p><p> </p><h1 id="AssignADDMAppliancestouControlroles-RoleDefinitions">Role Definitions</h1><div class="table-wrap"><table class="confluenceTable"><tbody><tr><th class="confluenceTh">Role Name</th><th class="confluenceTh">Description</th><th class="confluenceTh">Required</th></tr><tr><td class="confluenceTd">uMap TPL Production</td><td class="confluenceTd">Signed off TPL patterns will be uploaded and activated to appliances in this role</td><td style="text-align: center;" class="confluenceTd"><img class="emoticon emoticon-yellow-star" src="images/icons/emoticons/star_yellow.png" data-emoticon-name="yellow-star" alt="(star)"/></td></tr><tr><td class="confluenceTd">uMap TPL Test</td><td class="confluenceTd"><span>In testing TPL patterns will be uploaded and activated to appliances in this role</span></td><td style="text-align: center;" class="confluenceTd"> </td></tr><tr><td class="confluenceTd">uChange Visualisations Production</td><td class="confluenceTd">Visualisations will be gathered for all signed off applications from the appliance in this role</td><td class="confluenceTd"> </td></tr><tr><td colspan="1" class="confluenceTd"><span>uChange Visualisations Test</span></td><td colspan="1" class="confluenceTd"><span>Visualisations will be gathered for all in progress applications from the appliance in this role</span></td><td colspan="1" class="confluenceTd"> </td></tr><tr><td colspan="1" class="confluenceTd">uManage Production Scanner</td><td colspan="1" class="confluenceTd"><span>uManage graphs will be built for scanning appliances in this role</span></td><td colspan="1" class="confluenceTd"> </td></tr><tr><td colspan="1" class="confluenceTd">uManage Production Consolidation</td><td colspan="1" class="confluenceTd">uManage graphs will be built for consolidation appliances in this role</td><td colspan="1" class="confluenceTd"> </td></tr><tr><td colspan="1" class="confluenceTd">Subnet Scanner</td><td colspan="1" class="confluenceTd">uManage will use all appliance listed in here for all Subnet Scanning tasks configured</td><td colspan="1" class="confluenceTd"> </td></tr><tr><td colspan="1" class="confluenceTd">uManage Check Login</td><td colspan="1" class="confluenceTd"><span>uManage will use all appliance listed in here for all login checks requested by users</span></td><td colspan="1" class="confluenceTd"> </td></tr></tbody></table></div><p> </p><p> </p>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/35602/34354.png">Screen Shot 2014-06-23 at 11.50.22.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/35602/34355.png">Screen Shot 2014-06-23 at 11.20.23.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/35602/34356.png">Screen Shot 2014-06-23 at 11.19.15.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/35602/34350.png">Screen Shot 2014-06-23 at 10.52.43.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/35602/34351.png">Screen Shot 2014-03-08 at 11.56.58.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/35602/34352.png">Screen Shot 2014-03-08 at 11.55.07.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/35602/34353.png">Screen Shot 2014-03-08 at 11.53.29.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                 
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Oct 11, 2016 11:10</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

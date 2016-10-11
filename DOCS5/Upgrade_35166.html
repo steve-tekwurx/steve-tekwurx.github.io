@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>uControl Documentation 5.0 : Upgrade</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">uControl Documentation 5.0</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Documentation_35418.html">Documentation</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Release-Notes_35407.html">Release Notes</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            uControl Documentation 5.0 : Upgrade
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Steve Hicks</span>, last modified on Jul 08, 2016
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <div class="contentLayout2">
+<div class="columnLayout two-right-sidebar" data-layout="two-right-sidebar">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<h2 id="Upgrade-Upgrading"><strong>Upgrading</strong></h2><p>The following sections describe the upgrade paths from previous releases of the TekWurx uControl software to the latest GA</p><div class="confluence-information-macro confluence-information-macro-warning"><p class="title">Create a backup</p><span class="aui-icon aui-icon-small aui-iconfont-error confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>Before completing any steps in this section it is highly recommended that a data export and a backup of the original deployed uControl application is completed.</p></div></div><p> </p><p> </p><p><strong>Before starting the upgrade process, you will need</strong></p><ul><li>The uControl (uControl.war) package</li></ul><div class="confluence-information-macro confluence-information-macro-note"><span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>These required files / packages will be available under your support login to the TekWurx Support site.</p></div></div><div class="confluence-information-macro confluence-information-macro-information"><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>If installed using the default path, the UCONTROL_INSTALL_DIR would be /uControl/tomcat8</p></div></div><p> </p><ol><li><p>Stop the uControl Application</p><pre>&lt;UCONTROL_INSTALL_DIR&gt;/bin/shutdown.sh</pre><p> </p></li><li><p>Remove the existing version of the uControl application</p><pre>rm -rf &lt;UCONTROL_INSTALL_DIR&gt;/webapps/uControl</pre><p> </p></li><li><p>Unpack the uControl.war file</p><pre>cd &lt;UCONTROL_INSTALL_DIR&gt;/webapps
+mkdir uControl
+cd uControl
+unzip uControl.war</pre><p> </p></li><li><p>Start the application</p><pre>&lt;UCONTROL_INSTALL_DIR&gt;/bin/startup.sh</pre><p> </p><p> </p></li></ol><p> </p></div>
+</div>
+<div class="cell aside" data-type="aside">
+<div class="innerCell">
+<p> </p></div>
+</div>
+</div>
+</div>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/35166/34291.sql">upgradeDB.sql</a> (application/octet-stream)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/35166/34292.sql">createQuartz.sql</a> (application/octet-stream)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                 
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Oct 11, 2016 11:10</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

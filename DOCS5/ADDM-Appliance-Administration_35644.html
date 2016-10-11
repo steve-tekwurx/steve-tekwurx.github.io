@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>uControl Documentation 5.0 : ADDM Appliance Administration</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">uControl Documentation 5.0</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Documentation_35418.html">Documentation</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="User-Guide_35639.html">User Guide</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="uManage_35645.html">uManage</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            uControl Documentation 5.0 : ADDM Appliance Administration
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Steve Hicks</span> on Jul 08, 2016
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <div class="contentLayout2">
+<div class="columnLayout single" data-layout="single">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<p>To view current status of ADDM appliances:</p><ol><li>Login to uControl with a user account that has permissions to use uManage</li><li>Click the uManage icon<br/><br/><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/35644/32903.png" data-image-src="attachments/35644/32903.png" data-unresolved-comment-count="0" data-linked-resource-id="32903" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Screen Shot 2014-07-02 at 12.40.49.png" data-base-url="https://testconftekwurx.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="35644" data-linked-resource-container-version="1"></span><br/><br/></li><li>The Configuration TAB will display all the ADDM appliances that you have integrated with uControl<br/><br/><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" width="500" src="attachments/35644/32822.png" data-image-src="attachments/35644/32822.png" data-unresolved-comment-count="0" data-linked-resource-id="32822" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Screen Shot 2014-09-10 at 11.24.08.png" data-base-url="https://testconftekwurx.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="35644" data-linked-resource-container-version="1"></span><br/><br/><br/></li><li>For each ADDM appliance uControl will show:<ol><li>Last reboot time</li><li>Whether the UI is available to users</li><li>IP address of Appliance</li><li>Version of ADDM on the appliance</li><li>TKU version installed on ADDM</li><li>Diskspace</li><li>Datastore Size</li><li>Current discovery mode (playback, record or None)</li><li>Any errors encountered with discovery</li></ol></li><li>The reboot button enables you to reboot the ADDM appliance host</li><li>The restart button enables you to restart the ADDM services</li><li>The start button enables you to start the ADDM services</li><li>The stop button enables you to stop the ADDM services</li><li>The ECA Error count button enables you to identify and see the current ECA errors from pattern on the ADDM appliance</li><li>The Launch UI button enables you to access the ADDM UI.</li><li>Stop Discovery provides the capability to stop (and start) discovery on the ADDM appliance. When discovery is running the button is green and read &quot;Stop Discovery&quot;. If discovery is stopped the button is red and reads &quot;Start Discovery&quot;.</li><li>Start Maintenance Mode enables you to place an appliance into Maintenance mode - preventing users from accessing the ADDM UI. If you place an appliance into maintenance mode the button turns red and enables you to disable maintenance mode.</li><li>The service status section of the page will show the current state of the ADDM services</li><li>The baseline status section will show the current baseline status of the addm appliance</li><li>The Show Cluster Information' will show cluster information of the appliance<br/><br/><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" width="500" src="attachments/35644/32817.png" data-image-src="attachments/35644/32817.png" data-unresolved-comment-count="0" data-linked-resource-id="32817" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Screen Shot 2014-09-10 at 11.25.14.png" data-base-url="https://testconftekwurx.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="35644" data-linked-resource-container-version="1"></span></li></ol></div>
+</div>
+</div>
+<div class="columnLayout single" data-layout="single">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<h2 id="ADDMApplianceAdministration-Alerts"><strong>Alerts</strong></h2><p>uManage generates alerts allowing you to monitor, and be alerted to, issues with your ADDM appliances.</p><p>The icons within the ADDM Status section of the page have green ticks set when everything is healthy. The left hand gif provides information about ADDM itself and generates alerts when either the Appliance itself becomes unavailable or the UI becomes unavailable. The right hand gif provides information about the disk space on the appliance and generates alerts when utilisation goes over a pre-defined limit.</p><p> </p></div>
+</div>
+</div>
+<div class="columnLayout three-equal" data-layout="three-equal">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" src="attachments/35644/32800.png" data-image-src="attachments/35644/32800.png" data-unresolved-comment-count="0" data-linked-resource-id="32800" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Screen Shot 2014-07-02 at 12.46.17.png" data-base-url="https://testconftekwurx.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="35644" data-linked-resource-container-version="1"></span></p><p style="text-align: center;">ADDM Appliance with full health</p></div>
+</div>
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" src="attachments/35644/32795.png" data-image-src="attachments/35644/32795.png" data-unresolved-comment-count="0" data-linked-resource-id="32795" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Screen Shot 2014-07-02 at 12.47.04.png" data-base-url="https://testconftekwurx.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="35644" data-linked-resource-container-version="1"></span></p><p style="text-align: center;">ADDM Appliance unavailable</p></div>
+</div>
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" src="attachments/35644/32791.png" data-image-src="attachments/35644/32791.png" data-unresolved-comment-count="0" data-linked-resource-id="32791" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Screen Shot 2014-07-02 at 12.47.52.png" data-base-url="https://testconftekwurx.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="35644" data-linked-resource-container-version="1"></span></p><p style="text-align: center;">ADDM Appliance with Disk Space Issues</p></div>
+</div>
+</div>
+<div class="columnLayout single" data-layout="single">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<p> </p><p>Underneath the Appliance icons is an error count button. This shows any errors detected on the appliance during the last discovery run. To view these errors click the button and a pop-up will display the error message and cause of the error.</p></div>
+</div>
+</div>
+</div>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/35644/32817.png">Screen Shot 2014-09-10 at 11.25.14.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/35644/32822.png">Screen Shot 2014-09-10 at 11.24.08.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/35644/32791.png">Screen Shot 2014-07-02 at 12.47.52.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/35644/32795.png">Screen Shot 2014-07-02 at 12.47.04.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/35644/32800.png">Screen Shot 2014-07-02 at 12.46.17.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/35644/32804.png">Screen Shot 2014-07-02 at 12.44.30.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/35644/32900.png">Screen Shot 2014-07-02 at 12.41.26.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/35644/32903.png">Screen Shot 2014-07-02 at 12.40.49.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                 
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Oct 11, 2016 11:12</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>
