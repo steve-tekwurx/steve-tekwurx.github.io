@@ -541,11 +541,10 @@
 	 
 	 
 	 
-	 
   	 $('.click').on("click", function(e){
   	 $(".click").toggleClass("collapse");
         e.preventDefault(); // cancel the default a tag event.
-
+		$(this).parent().find('ul').toggle();
 		
 
         $.get( $(this).attr("loadFile"), function( data ) {
